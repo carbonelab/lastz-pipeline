@@ -36,7 +36,7 @@ option_list = list(
   make_option(c("-Q", "--querySizes"),
               type="character",
               default=NULL,
-              help="Query chrom.sizes file specifies chroms to include. Uses known chros from twoBit file if not given.",
+              help="Query chrom.sizes file specifies chroms to include. Uses known chroms from twoBit file if not given.",
               metavar = "character"),
   make_option(c("-d", "--outdir"),
               type="character",
