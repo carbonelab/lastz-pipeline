@@ -1,0 +1,21 @@
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - python==3.9
+    - ucsc-chainmergesort
+    - ucsc-lavtopsl 
+    - ucsc-axtchain
+    - ucsc-chainprenet
+    - ucsc-netsyntenic
+    - ucsc-chainnet
+    - ucsc-axtsort
+    - ucsc-nettoaxt
+    - ucsc-axttomaf
+    - ucsc-maffilter
+    - ucsc-axtsort
+    - lastz
+    - last
+    - bioconductor-cner
+    - r-optparse

@@ -130,7 +130,7 @@ lavs <- lastz(assemblyTarget, assemblyQuery,
               chrsTarget=chromsTargetKnown,
               chrsQuery=chromsQueryKnown,
               outputDir=axtDir,
-              distance="near", mc.cores=cores, binary = 'lastz-1.04.00')
+              distance="near", mc.cores=cores, binary = 'lastz')
 
 ## lav files to psl files conversion
 psls <- lavToPsl(lavs, removeLav=TRUE, binary="lavToPsl")
@@ -149,7 +149,7 @@ allChain <- chainMergeSort(chains, assemblyTarget, assemblyQuery,
                                                          ignore.case=TRUE), ".", 
                                                      sub("\\.2bit$", "", basename(assemblyQuery), 
                                                          ignore.case=TRUE), ".all.chain")),
-                           removeChains=FALSE, binary="chainMergeSort")
+                           removeChains=TRUE, binary="chainMergeSort")
 
 
 ## Filtering out chains
