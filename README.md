@@ -61,3 +61,23 @@ If the dotplot is too busy with smaller noisy alignments, you can filter the low
 ```
 mafFiler -minScore=10000 in.maf out.filt.maf
 ```
+
+
+# Demo Data
+
+To align the human genome vs the rhesus macaque genome the necessary files can be downloaded from UCSC:
+
+Human 2bit genome: `https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit`
+Human chromosome sizes: `https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes`
+Rhesus 2bit genome: `https://hgdownload.soe.ucsc.edu/goldenPath/rheMac10/bigZips/rheMac10.2bit`
+Rhesus chromosome sizes: `https://hgdownload.soe.ucsc.edu/goldenPath/rheMac10/bigZips/rheMac10.chrom.sizes`
+
+The command to run the pairwise alignement pipeline between human and rhesus would then be constructed as follows using 40 logical CPU cores, taking somewhere between 3 and 4 hours to run:
+
+```
+conda activate lastz-test
+Rscript lastz-pipe.R -t hg38.2bit -T hg38.chrom.sizes -q rheMac10.2bit -Q rheMac10.chrom.sizes -p 40 -d hg38.rheMac10
+```
+
+
+
